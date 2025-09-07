@@ -49,6 +49,9 @@ jobs:
           name: robot-results
           path: Results/
 
+      - name: Zip results
+        if: always()
+        run: zip -r Results.zip Results/
 
       # 📩 Send email with attached results
       - name: Send report by email
@@ -63,4 +66,4 @@ jobs:
           to: "omar-fares@outlook.sa"
           from: "Robot CI omar fares"
           body: "Attached are the latest Robot Framework test reports."
-          attachments: "Results/log.html,Results/report.html"
+          attachments: "Results.zip"
