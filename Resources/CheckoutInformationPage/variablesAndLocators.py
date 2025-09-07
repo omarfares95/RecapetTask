@@ -1,0 +1,7 @@
+first_name_txt = "//input[@id='first-name']"
+last_name_txt = "//input[@id='last-name']"
+postal_code_txt = "//input[@id='postal-code']"
+continue_btn = "//input[@id='continue']"
+total_price_txt = "//div[@class='summary_subtotal_label']"
+tax_price_txt = "//div[@class='summary_tax_label']"
+finish_btn = "(//button[@id='finish'])"

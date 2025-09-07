@@ -1,0 +1,6 @@
+sort_btn = "//select[@class='product_sort_container']"
+sort_value = "lohi"
+add_to_cart_btn = "(//div[@class='inventory_item'])[InputNumber]//button"
+added_item_name = "(//div[@class='inventory_item'])[InputNumber]//div[2]//div//a//div"
+added_item_price = "(//div[@class='inventory_item_price'])[InputNumber]"
+Cart_icon = "//a[@class='shopping_cart_link']"

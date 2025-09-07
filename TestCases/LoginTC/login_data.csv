@@ -1,0 +1,5 @@
+*** Test Cases ***;${username};${password};${expected_msg}
+Check Login by correct login variables;standard_user;secret_sauce;Products
+Check Login by incorrect username or password variables;standard_user;standard_user;Epic sadface: Username and password do not match any user in this service
+Check Login by empty username;${EMPTY};secret_sauce;Epic sadface: Username is required
+Check Login by empty password;standard_user;${EMPTY};Epic sadface: Password is required
