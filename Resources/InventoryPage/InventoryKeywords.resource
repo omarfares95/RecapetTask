@@ -3,7 +3,8 @@ Variables   variablesAndLocators.py
 Resource    ../pageBase.resource
 *** Keywords ***
 sort Products from Low to High Price
-    Select From List By Value    ${sort_btn}    ${sort_value}
+    Wait Until Element Is Visible    ${sort_btn}
+    Select From List By Label    ${sort_btn}    ${sort_value}
 
 add item to cart
     [Arguments]    ${item_number}
