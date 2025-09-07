@@ -50,8 +50,16 @@ jobs:
           path: Results/
 
 
-      - name: Deploy report to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v4
+      # 📩 Send email with attached results
+      - name: Send report by email
+        uses: dawidd6/action-send-mail@v3
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./Results
+          server_address: smtp.gmail.com
+          server_port: 465
+          username: omarfares802@gmail.com
+          password: oode dukn dxxf ctal
+          subject: "Robot Framework Test Results"
+          to: "omar-fares@outlook.sa"
+          from: "Robot CI omar fares"
+          body: "Attached are the latest Robot Framework test reports."
+          attachments: "Results/log.html,Results/report.html"
