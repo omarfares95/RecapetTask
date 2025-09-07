@@ -40,9 +40,9 @@ jobs:
         run: |
           source .venv/bin/activate
           robot --outputdir Results \
-                --variable USERNAME:$USERNAME \
-                --variable PASSWORD:$PASSWORD \
-                --variable BASE_URL:$BASE_URL \
+                --variable USERNAME:standard_user \
+                --variable PASSWORD:secret_sauce \
+                --variable URL:https://www.saucedemo.com \
                 TestCases\
 
       # Upload results as artifacts
