@@ -53,9 +53,10 @@ complete order
 Login
     Open Base Browser
     Open Login Page
-    Read Env
+#    Read Env
     ${username}=    Get Environment Variable    USERNAME
     ${password}=    Get Environment Variable    PASSWORD
+    Log To Console    ${username} - ${password}
     Insert Username    ${username}
     Insert Password    ${password}
     Click Login Button
