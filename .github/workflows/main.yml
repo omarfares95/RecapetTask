@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
 
     env: 
-      USERNAME: standard_user
+      USERNAME: standard_users
       PASSWORD: secret_sauce
       URL: https://www.saucedemo.com
 
