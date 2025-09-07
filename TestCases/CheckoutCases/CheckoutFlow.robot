@@ -54,8 +54,8 @@ Login
     Open Base Browser
     Open Login Page
     Read Env
-    ${username}=    Get Environment Variable    username
-    ${password}=    Get Environment Variable    password
+    ${username}=    Get Environment Variable    USERNAME
+    ${password}=    Get Environment Variable    PASSWORD
     Insert Username    ${username}
     Insert Password    ${password}
     Click Login Button
