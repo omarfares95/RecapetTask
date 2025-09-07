@@ -39,7 +39,11 @@ jobs:
       - name: Run Robot Framework tests
         run: |
           source .venv/bin/activate
-          robot --outputdir Results TestCases/
+          robot --outputdir Results \
+                --variable USERNAME:$USERNAME \
+                --variable PASSWORD:$PASSWORD \
+                --variable BASE_URL:$BASE_URL \
+                TestCases\
 
       # Upload results as artifacts
       - name: Upload Robot Results
