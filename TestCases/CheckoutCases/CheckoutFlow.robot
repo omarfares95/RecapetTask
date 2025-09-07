@@ -10,6 +10,7 @@ ${Total_items_price}    0
 *** Test Cases ***
 Add To Cart
     [Tags]    E2E    AddToCart    CheckOut
+    Page Should Contain    Products
     Wait Until Keyword Succeeds    3x    5s    sort Products from Low to High Price
     @{Items_list}=    Create List
     Set Global Variable    ${Items_list}
