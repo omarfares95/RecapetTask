@@ -26,4 +26,5 @@ check price is same
     RETURN    ${status}
 
 click Checkout
+    Page Should Contain Element    ${checkout_btn}    check out button not exist
     Click Button    ${checkout_btn}
