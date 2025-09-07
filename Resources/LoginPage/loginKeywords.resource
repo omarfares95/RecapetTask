@@ -6,6 +6,7 @@ Open Login Page
     Read Env
     ${env_url}=    Get Environment Variable    URL
     Go To    ${env_url}
+    Log To Console    ${env_url}
 Insert Username
     [Arguments]    ${username}
     Wait Until Keyword Succeeds    3x    5s    Page Should Contain Element    ${user_name_field}
