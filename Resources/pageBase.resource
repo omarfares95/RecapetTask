@@ -14,17 +14,18 @@ Resource    ../TestCases/TestBase.resource
 
 *** Variables ***
 ${BROWSER}    chrome
-${BROWSER_HEADLESS}    false
+${BROWSER_HEADLESS}    true
 
 *** Keywords ***
 Open Base Browser
     ${options}=     Evaluate    sys.modules['selenium.webdriver'].ChromeOptions()    sys, selenium.webdriver
     Run Keyword If    '${BROWSER_HEADLESS}' == 'true'    Call Method    ${options}    add_argument    --headless
     Call Method    ${options}    add_argument    --disable-gpu
-    Call Method    ${options}    add_argument    --incognito
     Call Method    ${options}    add_argument    --disable-save-password-bubble
     Call Method    ${options}    add_argument    --no-first-run
     Call Method    ${options}    add_argument    --disable-extensions
+    Call Method    ${options}    add_argument    --no-sandbox
+    Call Method    ${options}    add_argument    ----disable-dev-shm-usage
     Open Browser    browser=${BROWSER}    options=${options}
 	Maximize Browser Window
 
