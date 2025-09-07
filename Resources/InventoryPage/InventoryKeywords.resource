@@ -12,7 +12,6 @@ add item to cart
     ${added_item_price}    Replace String    ${added_item_price}    InputNumber    ${item_number}
     Click Element    ${add_to_cart_btn}
     ${add_to_cart_btn_text}    Get Text    ${add_to_cart_btn}
-    Log To Console    ${add_to_cart_btn_text}
     Should Be Equal    ${add_to_cart_btn_text}    Remove
     ${item_name}    Get Text    ${added_item_name}
     ${item_price}    Get Text    ${added_item_price}

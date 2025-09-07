@@ -23,11 +23,12 @@ Open Base Browser
     Call Method    ${options}    add_argument    --disable-gpu
     Call Method    ${options}    add_argument    --disable-save-password-bubble
     Call Method    ${options}    add_argument    --no-first-run
+    Call Method    ${options}    add_argument    --incognito
     Call Method    ${options}    add_argument    --disable-extensions
     Call Method    ${options}    add_argument    --no-sandbox
     Call Method    ${options}    add_argument    ----disable-dev-shm-usage
     Open Browser    browser=${BROWSER}    options=${options}
-	Maximize Browser Window
+
 
 Close Base Browser
     Close Browser

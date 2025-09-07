@@ -26,7 +26,8 @@ Add To Cart
 
 complete order
     [Tags]    E2E    CheckOut
-    click Checkout
+    Wait Until Keyword Succeeds    3x    5s    click Checkout
+    Wait Until Keyword Succeeds    3x    5s    Page Should Contain    Checkout: Your Information
     Sleep    1S
     Click Continue
     Page Should Contain    Error: First Name is required

@@ -16,7 +16,7 @@ Insert ZIP Code
     Input Text    ${postal_code_txt}    ${zipcode_name}
     
 Click Continue
-    Click Button    ${continue_btn}
+    Wait Until Keyword Succeeds    2x    2s    Click Button    ${continue_btn}
 
 get Item Total Price
     ${Total_Price}    Get Text    ${total_price_txt}
