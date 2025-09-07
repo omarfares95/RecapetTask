@@ -1,5 +1,5 @@
 *** Settings ***
-Resource    ./TestBase.resource
+Resource    ../TestBase.resource
 Suite Setup    Login
 Suite Teardown    Close Browser
 Test Teardown    Capture On Failure
@@ -39,22 +39,23 @@ complete order
     Page Should Contain    Error: Postal Code is required
     Insert ZIP Code
     Click Continue
-    Sleep    2S
-    Page Should Contain    Checkout: Overview
+    Wait Until Keyword Succeeds    3x    5s    Page Should Contain    Checkout: Overview
     ${totalPrice}    Get Item Total Price
     ${taxPrice}    Get Tax Price
     ${calculated_tax}    Evaluate    round(${totalPrice} * 0.08, 2)
     Should Be Equal As Numbers    ${calculated_tax}    ${taxPrice}
     Should Be Equal As Numbers    ${Total_items_price}    ${totalPrice}
     finish order
-    Sleep    2S
-    Page Should Contain    Thank you for your order!
+    Wait Until Keyword Succeeds    1x    5s    Page Should Contain    Thank you for your order!
 
 
 *** Keywords ***
 Login
     Open Base Browser
     Open Login Page
+    Read Env
+    ${username}=    Get Environment Variable    username
+    ${password}=    Get Environment Variable    password
     Insert Username    ${username}
     Insert Password    ${password}
     Click Login Button

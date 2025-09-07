@@ -1,0 +1,5 @@
+python-dotenv==1.1.1
+robotframework==7.3.2
+robotframework-faker==6.0.0
+robotframework-pythonlibcore==4.4.1
+robotframework-seleniumlibrary==6.7.1
