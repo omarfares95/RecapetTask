@@ -14,7 +14,7 @@ Resource    ../TestCases/TestBase.resource
 
 *** Variables ***
 ${BROWSER}    chrome
-${BROWSER_HEADLESS}    false
+${BROWSER_HEADLESS}    true
 
 *** Keywords ***
 Open Base Browser
