@@ -10,7 +10,7 @@ jobs:
   test:
     runs-on: ubuntu-latest
 
-    env: # ✅ هنا بتحط الـ env variables من secrets
+    env: 
       USERNAME: ${{ secrets.username }}
       PASSWORD: ${{ secrets.password }}
       BASE_URL: ${{ secrets.URL }}
