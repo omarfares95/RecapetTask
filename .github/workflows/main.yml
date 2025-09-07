@@ -11,9 +11,9 @@ jobs:
     runs-on: ubuntu-latest
 
     env: 
-      USERNAME: ${{ secrets.USERNAME }}
-      PASSWORD: ${{ secrets.PASSWORD }}
-      BASE_URL: ${{ secrets.URL }}
+      USERNAME: standard_user
+      PASSWORD: secret_sauce
+      URL: https://www.saucedemo.com
 
     steps:
       # Checkout code
@@ -40,9 +40,6 @@ jobs:
         run: |
           source .venv/bin/activate
           robot --outputdir Results \
-                --variable USERNAME:standard_user \
-                --variable PASSWORD:secret_sauce \
-                --variable URL:https://www.saucedemo.com \
                 TestCases\
 
       # Upload results as artifacts

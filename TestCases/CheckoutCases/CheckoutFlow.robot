@@ -54,7 +54,6 @@ complete order
 Login
     Open Base Browser
     Open Login Page
-#    Read Env
     ${username}=    Get Environment Variable    USERNAME
     ${password}=    Get Environment Variable    PASSWORD
     Log To Console    ${username} - ${password}
